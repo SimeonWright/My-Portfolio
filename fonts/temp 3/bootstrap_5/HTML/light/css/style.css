@@ -1,12 +1,11 @@
 /*-----------------------------------------------------------
-* Template Name    : Kerri | Responsive Bootstrap 4 Personal Template
+* Template Name    : Kerri | Responsive Bootstrap 5 Personal Template
 * Author           : SRBThemes
 * Version          : 1.0.0
 * Created          : March 2018
 * File Description : Main css file of the template
 *------------------------------------------------------------
 */
-
 
 /***********************
     1.BASIC
@@ -25,6 +24,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito:400,600,700');
 
+
 /*======================
         1.BASIC
 ========================*/
@@ -32,8 +32,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
-    color: #fbfbfb;
-    background: #2e3135;
 }
 
 h1,
@@ -69,7 +67,7 @@ button:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #26282b;
+    background-color: #fff;
     z-index: 9999999;
 }
 
@@ -87,10 +85,10 @@ button:focus {
     font-size: 10px;
     position: relative;
     text-indent: -9999em;
-    border-top: 5px solid #2e3135;
-    border-right: 5px solid #2e3135;
-    border-bottom: 5px solid #2e3135;
-    border-left: 5px solid #6b6e6f;
+    border-top: 5px solid rgba(0, 0, 0, 0.2);
+    border-right: 5px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #000;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -156,20 +154,7 @@ button:focus {
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
-    background-color: #2e3135;
-}
-
-.bg-light {
-    background-color: #26282b !important;
-}
-
-.text-muted {
-    color: #a0a0ac !important;
-}
-
-.img-thumbnail {
-    background-color: #3b3e42;
-    border: 1px solid #4d5052;
+    background-color: #fff;
 }
 
 .h-100vh {
@@ -239,7 +224,7 @@ button:focus {
 }
 
 .bg-overlay {
-    background-color: rgba(38, 40, 43, 0.72);
+    background-color: rgba(0, 0, 0, 0.69);
     position: absolute;
     top: 0;
     right: 0;
@@ -307,7 +292,7 @@ button:focus {
 
 .custom-nav.stickyadd {
     background-color: #fff !important;
-    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.051);
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.050980392156862744);
     padding: 15px 0px;
 }
 
@@ -321,7 +306,7 @@ button:focus {
 =============================*/
 
 .header-bg-img {
-    background-image: url(../images/header-bg.png);
+    background-image: url(../images/header-bg.jpg);
     position: relative;
     background-size: cover;
     background-position: center center;
@@ -329,17 +314,6 @@ button:focus {
 
 .header-content {
     max-width: 800px;
-}
-
-.header-table-center {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.header-table {
-    display: table;
-    width: 100%;
-    height: 100%;
 }
 
 .header-name {
@@ -427,13 +401,13 @@ button:focus {
 =============================*/
 
 .about-social li a {
-    color: #a0a0ac;
+    color: #000;
     display: inline-block;
     height: 42px;
     width: 42px;
     font-size: 20px;
     border-radius: 50%;
-    border: 2px solid #6b6e6f;
+    border: 2px solid #d4d4d4;
     line-height: 38px;
     transition: all 0.5s;
     text-align: center;
@@ -445,7 +419,7 @@ button:focus {
 =============================*/
 
 .services-boxes {
-    border: 1px solid #353941;
+    border: 1px solid #e8e8e8;
 }
 
 .services-boxes .services-boxes-icon i {
@@ -487,7 +461,7 @@ button:focus {
 =============================*/
 
 .testi_boxes {
-    max-width: 200px;
+    max-width: 750px;
 }
 
 .client_review {
@@ -498,15 +472,28 @@ button:focus {
     font-size: 16px;
 }
 
+.img_testi img{
+    max-width: 110px;
+}
+
 .testi_boxes .tam_testi_icon {
     font-size: 50px;
 }
 
-.owl-theme .owl-controls .owl-page {
+.owl-dots {
+    text-align: center;
+}
+
+.owl-dots button.owl-dot{
     margin: 20px 0px;
 }
 
-.owl-theme .owl-controls .owl-page span {
+.owl-dots button.owl-dot.active span {
+    width: 20px;
+    opacity: 1;
+}
+
+.owl-dots button.owl-dot span{
     display: block;
     width: 12px;
     height: 6px;
@@ -519,10 +506,6 @@ button:focus {
     transition: all 0.5s;
 }
 
-.owl-theme .owl-controls .owl-page.active span {
-    width: 20px;
-}
-
 
 /*===========================
         8.WORK
@@ -531,7 +514,7 @@ button:focus {
 .work_menu li a {
     cursor: pointer;
     display: block;
-    color: #fff;
+    color: #000;
     border-radius: 30px;
     letter-spacing: 0.03em;
     margin-bottom: 5px;
@@ -560,6 +543,7 @@ button:focus {
 .work_box .work_img {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .work_box .work_img:after {
@@ -607,32 +591,23 @@ button:focus {
 }
 
 .work_box:hover .work_img:after {
-    background: rgba(38, 40, 43, 0.72);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .work_box:hover .work_img>img {
     transform: scale(1.05);
 }
 
+
 /*=========================
         9.CONTACT
-===========================*/
-
-.blog_color{
-    background-color: #2e3135;
-}
-
-
-/*=========================
-        10.CONTACT
 ===========================*/
 
 .form-kerri .form-control {
     box-shadow: none !important;
     height: 50px;
-    border: 2px solid #3b3e42;
-    background-color: transparent;
-    color: #fbfbfb;
+    margin-bottom: 14px;
+    border: 2px solid #e0e0e0;
 }
 
 .form-kerri textarea.form-control {
@@ -671,21 +646,14 @@ button:focus {
     font-size: 22px;
 }
 
-/* #contact{
-    padding: 0%;
-} */
-
-#emailbox{
-    margin-left: 33%;
-}
 
 /*======================
-        11.FOOTER
+        10.FOOTER
 ========================*/
 
 .footer {
     padding: 70px 0px;
-    background-color: #26282b !important;
+    background-color: #212121 !important;
 }
 
 .footer .footer-alt p {
@@ -696,26 +664,32 @@ button:focus {
     border-radius: 50%;
     transition: all 0.5s;
     background-color: rgba(241, 241, 241, 0.08);
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     display: block;
-    font-size: 18px;
-    line-height: 42px;
+    font-size: 20px;
+    line-height: 44px;
     text-align: center;
+}
+
+.copyright_content{
+    color: #ababab;
+}
+
+.footer-alt li a i{
+    color: #ababab;
+    transition: all 0.5s;
 }
 
 
 /*===========================
-        12.RESPONSIVE
+        11.RESPONSIVE
 =============================*/
 
 @media (min-width: 200px) and (max-width: 768px) {
     .custom-nav {
         background-color: #fff !important;
         padding: 10px 0px !important;
-    }
-    .custom-nav .container {
-        width: 85%;
     }
     .custom-nav .navbar-toggler {
         color: #000;
@@ -733,12 +707,12 @@ button:focus {
     }
     .h-100vh {
         height: auto;
-        padding: 120px 0 140px;
+        padding: 120px 0 150px;
     }
     .header-bg-img {
         clip-path: none;
-        padding: 120px 0 140px;
-    }    
+        padding: 120px 0 150px;
+    }
     .wave-home.h-100vh{
         height: auto;
         padding: 120px 0 190px;
@@ -758,5 +732,11 @@ button:focus {
 @media (max-width: 2560px) {
     .home-bg .curv-img {
         bottom: -5px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px !important;
     }
 }
